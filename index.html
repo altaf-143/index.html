@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redstore Ecommerce Website Desiegn</title>
+    <style>
+        .navbar {
+            display: flex;
+            padding: 0px;
+            color: brown;
+            border-radius: 20px;
+            text-align: right;
+            background-color: aqua;
+            height: 50px;
+        }
+        
+        .logo {
+            color: black;
+            text-align: left;
+        }
+        
+        .navbar a {
+            margin: 10px;
+            color: black;
+            padding: 5px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            border-radius: 10px;
+            margin-left: 50px;
+        }
+        
+        .navbar a:hover {
+            background-color: yellow;
+        }
+        
+        .navbar input {
+            margin-left: 50px;
+            border-radius: 15px;
+            height: 25px;
+            width: 250px;
+            margin-top: 6px;
+        }
+        
+        .Container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+            background: radial-gradient(#fff, #ffd6d6);
+        }
+        
+        .row {
+            flex-wrap: wrap;
+            display: flex;
+            margin-top: 100px;
+        }
+        
+        .col-2 {
+            flex-basis: 50%;
+            min-width: 300px;
+            flex: 2px;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            float: left;
+        }
+        
+        .col-2 img {
+            max-width: 100%;
+        }
+        
+        .col-2 h2 {
+            font-size: 30px;
+            line-height: 60px;
+            margin-right: 150px;
+            margin-bottom: 40px;
+        }
+        
+        .col-2 p {
+            margin-right: 250px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: orange;
+            color: black;
+            padding: 8px 30px;
+            margin: 30px 0;
+            border-radius: 30px;
+        }
+        
+        .header {
+            background-color: white;
+        }
+        
+        .btn :hover {
+            background-color: blue;
+        }
+        
+        .categories {
+            margin: 70px 0;
+        }
+        
+        .col-3 {
+            flex-basis: 30%;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .col-4 {
+            flex-basis: 25%;
+            padding: 10px;
+            min-width: 200px;
+            margin-bottom: 50px;
+            text-align: center;
+            transition: tranceform 0.5s;
+        }
+        
+        .col-4 img {
+            width: 20%;
+            margin-right: 8px;
+        }
+        
+        .col-5 img {
+            max-width: 100%;
+            margin-left: 200px;
+        }
+        
+        .title {
+            text-align: center;
+            margin: 0 auto 80px;
+            position: relative;
+            line-height: 60px;
+            color: black;
+            font-size: 40px;
+        }
+        
+        .title::after {
+            /* for underline bellow title like featured product*/
+            content: '';
+            background: orange;
+            width: 80px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h4 {
+            color: black;
+            font-weight: normal;
+            font-size: 20px;
+        }
+        
+        .col-4 p {
+            font-size: 20px;
+        }
+        
+        .col-4 :hover {
+            transform: translateY(-5px);
+        }
+        
+        .offer {
+            background: radial-gradient(#fff, #ffd6d6);
+        }
+        
+        .offer img {
+            padding: 25px;
+        }
+        
+        small {
+            color: #555;
+        }
+        /*--------------Brands---------*/
+        
+        .Brands {
+            margin: 100px auto;
+        }
+        
+        .col-6 {
+            width: 200px;
+            margin: 50px;
+        }
+        
+        .col-6 img {
+            width: 100%;
+            cursor: pointer;
+            filter: grayscale(100%);
+            margin: 50px 50px;
+        }
+        
+        .col-6 img :hover {
+            filter: grayscale(0);
+        }
+        /*------------Footer--------*/
+        
+        .footer {
+            background: #000;
+            color: #8a8a8a;
+            font-size: 15px;
+            padding: 60px 0 20px;
+        }
+        
+        .footer p {
+            color: #8a8a8a;
+        }
+        
+        .footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3,
+        .footer-col-4 {
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col-1 {
+            flex-basis: 30%;
+        }
+        
+        .footer-col-2 {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .footer-col-2 img {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col-3,
+        .footer-col-4 {
+            flex-basis: 12%;
+            text-align: center;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .footer hr {
+            border: none;
+            background: #b5b5b5;
+            height: 1px;
+            margin: 20px 0;
+        }
+        
+        .copyright {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+
+        <div class="Container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://redstoreua.com/image/cache/catalog/Logo_redstore_final-15small-400x200.png" width="110px" height="70px">
+                </div>
+                <img src="https://th.bing.com/th?id=OIP.wmYynIjAGiavuuYkn0BY5wHaHX&w=250&h=249&c=8&rs=1&qlt=90&o=6&dpr
+        =1.5&pid=3.1&rm=2" width="25px">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Account</a>
+
+                <a href="#"> Cart<img src="https://th.bing.com/th/id/OIP.ZyrjNMg2YCH9WIeG8FTLLQHaGE?w=218&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="30px"></a>
+
+
+
+                <form>
+
+                    <input type="text" placeholder="search..." name="search"><i class="bi bi-search"></i>
+                    <button type="search" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                      Search</button>
+                    <button type="submit"><i class="fa fa-search"></i></button>
+
+                </form>
+                <img src="https://th.bing.com/th/id/OIP.uzlgHyalT0gWk_Jq5LuXHgHaHa?w=196&h=196&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="40px" height="40px">
+
+
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Workout <br> A New Style!</h1>
+                    <p>Success isn't always about greatness. it's about consistency.<br> consistent Hard work Gain success. Greatness Will Come</p>
+                    <a href="" class="btn">Explore Now &#10132;</a>
+                </div>
+                <div class="col-2">
+                    <img src="https://media.istockphoto.com/photos/soccer-player-man-kicking-silhouette-isolated-picture-id996020700?k=6&m=996020700&s=170667a&w=0&h=iN7EE2OxuSP-JJZLNH9XZMh17QVe2priVkoegYVoR_0=" width="500px">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!------featured Categories----->
+    <div class="categories">
+        <div class="row">
+            <div class="col-3"><img src="https://th.bing.com/th/id/OIP.4tFjX6ofweF68F01tPpVsgHaHa?w=203&h=203&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="400px">
+            </div>
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.oOQS4re8vXByV44kTjdKbAHaHw?w=195&h=204&c=7&r=0&o=5&dpr=1.5&
+            pid=1.7" width="400px"></div>
+            <div>
+                <img src="https://th.bing.com/th?q=Men%27s+Thick+Zip+Up+Hoodies&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" width="400px">
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    </div>
+
+    </div>
+
+    <!------featured Products----->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://th.bing.com/th?id=OIP.z7KPIkGXclLVAPNs7ycK_QHaJQ&w=223&h=279&c=8&rs=1&qlt=
+                90&o=6&dpr=1.5&pid=3.1&rm=2">
+                <h4>Red Printed T-shirt </h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$50.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://th.bing.com/th/id/OIP.6LkaXPq-Zlnwk0CUv6fmXgHaGN?w=210&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                <h4>Mens Casuel Shoes </h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$55.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://th.bing.com/th/id/OIP.8IyaMGhQ_f45iMLDWFYc4wHaHa?w=204&h=204&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                <h4>Apple Watch 1st Generation </h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$85.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://th.bing.com/th/id/OIP.X7e2IeQALvjHCLc2oLtanAHaHa?w=202&h=202&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                <h4>Mens Stylish Hoodie</h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$75.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://rukminim1.flixcart.com/image/612/612/l4iscy80/jean/t/q/j/28-dobby-532-nam-broen-original-imagfdrchnhgqaz5.jpeg?q=70">
+                <h4>Mens black stylish Jeans </h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$50.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://rukminim1.flixcart.com/image/612/612/k7z3afk0/watch/t/c/x/lcs-8188-lois-caron-original-imafq3k9ztzdkyhe.jpeg?q=70">
+                <h4>Mens Watch </h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$55.00</b></p>
+
+            </div>
+        </div>
+        <h2 class="title"> Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://th.bing.com/th/id/OIP.J2_rX3mbTbMO8OwlZMtDigAAAA?pid=ImgDet&w=208&h=208&c=7&dpr=1.5">
+                <h4>Sports Ankle Socks For Men</h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$40.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://th.bing.com/th/id/OIP.nm_2JTuaUTn0aO9CZsU7lQHaIm?pid=ImgDet&w=193&h=223&c=7&dpr=1.5" alt="">
+                <h4>Hooded Main Standured Jacket for Men </h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$55.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://th.bing.com/th?q=Shiny+Men%27s+Dress+Shirts&dc=2&w=100&h=100&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247">
+                <h4>Mens Formal shirt Shiny</h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="">
+                <p><b>$85.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://th.bing.com/th/id/OIP.7-aN_l53xmJNoPgDVZkofwHaE7?w=242&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                <h4>DC Sneaker shoes</h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" width="200px">
+                <p><b>$75.00</b></p>
+
+            </div>
+            <div class="col-4">
+                <img src="https://www.bing.com/th?id=OPA.%2fHd%2bUvaPogoncQ474C474&o=5&pid=21.1&w=140&h=140&rs=1&qlt=100&dpr=1.5">
+                <h4>Smart Watch Band </h4>
+                <img src="https://th.bing.com/th?id=OIP.-bUwLIjCDiFA8RLUuhd_dAHaBa&w=350&h=67&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" width="200px">
+                <p><b>$55.00</b></p>
+
+            </div>
+        </div>
+    </div>
+    <!---------offer-->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="https://www.egprices.com/images/large/huawei-band-4-smart-watch-1.png" width="250px">
+                </div>
+                <div class="col-2">
+                    <p><b> Exclusively Available on Redstore.</b></p>
+                    <h2>Smart Band 4.</h2>
+                    <small>
+                        <b> The Mi Smart Band 4 features a 39.9% Larger <br>(than Mi Band 3)
+                        AMOLED Colord full-Touch <br> Display With Adjustable Brightness, So <br>
+                        Everything is clear as can be.</b>
+                    </small><br><br>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                    <h4>$65.00/-</h4>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!---------Brands-->
+    <div class="Brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://th.bing.com/th?q=Draw+Adidas+Logo&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247">
+
+
+                </div>
+
+                <div class="col-6">
+                    <img src="https://th.bing.com/th?id=OIP.b2ePKH-sbtzeOC6wgoBLnQHaFb&w=292&h=214&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" width="300px" height="200px"></div>
+
+                <div class="col-6">
+                    <img src="https://th.bing.com/th/id/OIP.JXXoTe1CFIRV6rG1vzAM6wHaEa?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="200px">
+
+                </div>
+                <div class="col-6">
+                    <img src="https://th.bing.com/th/id/OIP.IrFBwqME3jTOuVQWW1GrswHaFj?w=238&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="300px">
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--------Footer-------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download app for Android And ios Mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="https://nextrade.com.hk/wp-content/uploads/2021/03/20200817-130219_orig-1024x519.png" width="250px">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="">
+
+                    <p>our purpose is To sustenably make the pleasure and Benefits of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 - Easy Tutorials</p>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
